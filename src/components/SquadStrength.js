@@ -1,25 +1,7 @@
 import React, {Component} from 'react';
+import {calculateStrength, calculateIntelligence, calculateSpeed} from './helper';
 
 class SquadStrength extends Component{
-
-    calculateStrength(){
-        let strength = 0;
-        this.props.heroes.map((hero)=>strength+=hero.strength);
-        return strength;
-    }
-
-    calculateintelligence(){
-        let intelligence = 0;
-        this.props.heroes.map((hero)=>intelligence+=hero.intelligence);
-        return intelligence;
-    }
-
-    calculateSpeed(){
-        let speed = 0;
-        this.props.heroes.map((hero)=>speed+=hero.speed);
-        return speed;
-    }
-
     render(){
         return (
             <div>
@@ -27,13 +9,13 @@ class SquadStrength extends Component{
                 <div>
                     <ul className='list-group'>
                             <li className='list-group-item'>
-                                <b>Overall Strength: </b>{this.calculateStrength()}
+                                <b>Overall Strength: </b>{calculateStrength(this.props.heroes)}
                             </li>
                             <li className='list-group-item'>
-                                <b>Overall Intelligence: </b>{this.calculateintelligence()}
+                                <b>Overall Intelligence: </b>{calculateIntelligence(this.props.heroes)}
                             </li>
                             <li className='list-group-item'>
-                                <b>Overall Speed: </b> {this.calculateSpeed()}
+                                <b>Overall Speed: </b> {calculateSpeed(this.props.heroes)}
                             </li>
                     </ul>
                 </div>    
