@@ -8,6 +8,7 @@ import {removeCharacterById, addCharacterById} from '../actions';
 import CharacterList from './CharacterList';
 import HeroList from './HeroList';
 import SquadStrength from './SquadStrength';
+import CharacterStrength from './CharacterStrength';
 
 
 import '../assets/index.css'
@@ -17,9 +18,10 @@ class App extends Component{
         return (
             <div className='App'>
                 <h2> Super Squard </h2>
-                <div className="col-md-4"><CharacterList {...this.props}/></div>
-                <div className="col-md-4"><HeroList {...this.props}/></div>
-                <div className="col-md-4"><SquadStrength {...this.props}/></div>
+                <div className="col-md-3"><CharacterList {...this.props}/></div>
+                <div className="col-md-3"><CharacterStrength {...this.props}/></div>
+                <div className="col-md-3"><HeroList {...this.props}/></div>
+                <div className="col-md-3"><SquadStrength {...this.props}/></div>
             </div>
         );
     }
