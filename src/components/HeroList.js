@@ -15,6 +15,9 @@ class HeroList extends Component{
                         }) 
                     }
                 </ul>
+                {
+                    this.props.heroes.length?<input type='button' value='Clear' onClick={()=>this.props.clearAllHeroes()}></input>:<div class='no-hero'>No hero is selected</div>
+                }
              </div>   
         )
     }

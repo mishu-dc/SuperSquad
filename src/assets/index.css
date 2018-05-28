@@ -18,3 +18,10 @@ body{
     background-size: cover;
     opacity: 0.8;
 }
+
+.no-hero{
+    color: blue;
+    font-size: 18px !important;
+    opacity: 0.6;
+    font-weight: bold
+}

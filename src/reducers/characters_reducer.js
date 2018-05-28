@@ -1,6 +1,6 @@
 import character_json from '../data/characters.json';
 import {findCharacter} from './helpers';
-import {ADD_CHARACTER, REMOVE_CHARACTER} from '../actions';
+import {ADD_CHARACTER, REMOVE_CHARACTER, REMOVE_HEROES} from '../actions';
 
 
 function characters(state = character_json, action){
@@ -12,6 +12,8 @@ function characters(state = character_json, action){
         case REMOVE_CHARACTER:
             characters = [...state, findCharacter(action.id)];    
             return characters;
+        case REMOVE_HEROES:
+            return character_json; 
         default: 
             return state;
     }

@@ -3,7 +3,7 @@ import React from 'react';
 import {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {removeCharacterById, addCharacterById} from '../actions';
+import {removeCharacterById, addCharacterById, clearAllHeroes} from '../actions';
 
 import CharacterList from './CharacterList';
 import HeroList from './HeroList';
@@ -35,7 +35,7 @@ function mapStateToProps(state){
 }
 
 function mapDispatchToProps(dispatch){
-    return bindActionCreators({addCharacterById, removeCharacterById}, dispatch);
+    return bindActionCreators({addCharacterById, removeCharacterById, clearAllHeroes}, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
