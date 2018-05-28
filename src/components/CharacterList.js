@@ -1,7 +1,4 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { addCharacterById } from '../actions';
 
 class CharacterList extends Component{
     render(){
@@ -25,14 +22,4 @@ class CharacterList extends Component{
     }
 }
 
-function mapStateToProps(state){
-    return {
-        characters: state.characters
-    }
-}
-
-function mapDispatchToProps(dispatch){
-    return bindActionCreators ({addCharacterById}, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CharacterList);
+export default CharacterList;

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 
 class SquadStrength extends Component{
 
@@ -44,10 +43,5 @@ class SquadStrength extends Component{
     }
 }
 
-function mapStateToProps(state){
-    return {
-        heroes:state.heroes
-    }
-}
 
-export default connect(mapStateToProps, null)(SquadStrength);
+export default SquadStrength;
